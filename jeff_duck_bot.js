@@ -28,7 +28,7 @@ bot.on("message", (message) => {
     }
   } else
   if (command === 'duck') {
-    if (duck_choice.length === 0) return;
+    if (duck_choices.length === 0) return;
 
     var choice = duck_choices[Math.floor(Math.random()*duck_choices.length)]; //choose a random duck image to send
 
@@ -39,7 +39,7 @@ bot.on("message", (message) => {
     });
   } else
   if (command === 'help') {
-    message.channel.send("```Commands:\n\nquack : quack\nduck : get duck image\nhelp : print this help text```");
+    message.channel.send("```Commands:\n\nquack : quack\nduck : get a random duck image\nhelp : print this help text```");
   }
 });
 
