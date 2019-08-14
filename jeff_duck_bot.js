@@ -17,7 +17,7 @@ bot.on("message", (message) => {
   const command = args.shift().toLowerCase()
 
   if (command === 'quack') {
-    if(args.length !== 0 && args[0] > 0 && args[0] <= 20) {
+    if(args.length !== 0 && args[0] > 0 && args[0] <= cfg.quack_limit) {
       for(var i = 0; i < args[0]; i++) {
         message.channel.send("Quack!");
       }
